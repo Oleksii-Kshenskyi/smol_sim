@@ -2,7 +2,8 @@
     "name": "smol-sim",
     "version-string": "1.0.0",
     "dependencies": [
-        "fmt",
-        "raylib"
+        "box2d",
+        "sfml",
+        "entt"
     ]
 }
