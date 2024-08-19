@@ -1,5 +1,5 @@
 # Add vcpkg toolchain
-set(CMAKE_TOOLCHAIN_FILE "C:/Users/oleks/gitproj/smol_sim/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake")
 cmake_minimum_required(VERSION 3.26)
 project(smol_sim)
 
@@ -17,3 +17,5 @@ find_package(SFML COMPONENTS system window graphics CONFIG REQUIRED)
 
 add_executable(${PROJECT_NAME} ${SRC_DIR}/main.cxx)
 target_link_libraries(${PROJECT_NAME} PRIVATE EnTT::EnTT box2d::box2d sfml-system sfml-graphics sfml-window)
+
+set_property(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY VS_STARTUP_PROJECT ${PROJECT_NAME})
