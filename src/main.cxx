@@ -53,6 +53,19 @@ static void draw_tiles(sf::RenderWindow& window) {
     }
 }
 
+
+// NEXT STEPS:
+// - Create a couple different types of tile with different mechanics
+// - Create a player entity
+// - Player entity must check for collision with tiles and respond to
+//   one with the biggest collision zone
+// - Implement player movement (randomly changing directions, moving in
+//   random directions)
+// - Implement player to player collision (what happens then?)
+// - [ARCHITECTURE] Think about how can player actions from the Rust
+//   prototype (eat, kill etc.) be implemented here in real time (possibly
+//   through collision too).
+// - Maybe use EnTT's event system to connect events and behavior.
 int main()
 {
     // Initialize SFML window
